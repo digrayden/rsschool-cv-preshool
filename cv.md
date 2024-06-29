@@ -38,3 +38,8 @@ function updateStopwatch() {
 
 * **University:** Belarusian State University
   * Web-designer - developer
+  
+## Languages
+
+* **Russian** - native speaker
+* **English** - B1
