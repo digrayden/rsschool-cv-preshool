@@ -3,8 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Diana Grayden</title>
 </head>
 <body>
+    <div class="cv">
+		<nav class="nav">
+			<ul class="nav-ul">
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#about">About me</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+			</ul>
+		</nav>
+		<header class="head">
+			<div class="column-head">
+				<img src="images/Grayden.jpg" class="header-img" alt="Diana Grayden">
+			</div>
+			<div class="column-header">
+				<h1 class="head-title">Diana Grayden</h1>
+				<h3 class="head-subtitle">Web-developer</h3>
+			</div>
+		</header>
+		<div class="hr"></div>
+		<main class="main">
+			<div class="column-left">
+				<section class="sections">
+					<h2 class="main-title" id="contacts">Contacts</h2>
+					<ul class="contacts-ul">
+						<li class="contacts-li">
+							<span class="contacts-span">GitHub:</span><a href="https://github.com/digrayden" class="contact-link">https://github.com/digrayden</a>
+						</li>
+						<li class="contacts-li">
+							<span class="contacts-span">Discord:</span> Di Grayden (digrayden)
+						</li>
+						<li class="contacts-li">
+							<span class="contacts-span">Email:</span> <a href="mailto:graydendi@mail.ru" class="contact-link">graydendi@mail.ru</a>
+						</li>
+						<li class="contacts-li">
+							<span class="contacts-span">Address:</span> Minsk, Belarus
+						</li>
+					</ul>
+				</section>
+				<section class="sections">
+					<h2 class="main-title" id="education">Education</h2>
+					<div class="education-div">
+						<p class="education-date">2017 - 2022</p>
+						<p class="education-text">Belorusian State University<br>Psyhology</p>
+					</div>
+					<div class="education-div">
+						<p class="education-date">2023 - 2025</p>
+						<p class="education-text">Belorusian State University<br>Web-gesigner - developer</p>
+					</div>
+					<div class="education-div">
+						<p class="education-date">2024</p>
+						<p class="education-text">RS School<br>Front-end Developer</p>
+					</div>
+				</section>
+				<section class="sections languages">
+					<h2 class="main-title">Languages</h2>
+					<ul class="languages-ul">
+						<li class="languages-li">
+							<span class="language-span">Russian:</span> native
+						</li>
+						<li class="languages-li">
+							<span class="language-span">English:</span> B1
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="column-right">
+				<section class="sections">
+					<h2 class="main-title" id="about">About me</h2>
+					<p class="about-text">
+						I’m a junior frontend developer. I received my first higher education in psychology, but my
+						interest in programming led me to
+						additional training as a web designer - programmer. Now I have completed the first course in
+						this
+						specialty. My goal is to constantly develop and learn new things. I think that my ability to
+						learn and
+						acquire new skills will help me become a good front-end developer.
+					</p>
+				</section>
+				<section class="sections">
+					<h2 class="main-title" id="skills">Skills</h2>
+					<ul class="skills-ul">
+						<li class="skills-li">
+							<span class="skills-text">HTML</span>
+						</li>
+						<li class="skills-li">
+							<span class="skills-text">CSS</span>
+						</li>
+						<li class="skills-li">
+							<span class="skills-text">JavaScrip basic</span>
+						</li>
+						<li class="skills-li">
+							<span class="skills-text">Git&GitHub</span>
+						</li>
+						<li class="skills-li">
+							<span class="skills-text">Figma</span>
+						</li>
+						<li class="skills-li">
+							<span class="skills-text">AdobeAnimate, AdobePhotoshop, CorelDraw, 3D Max</span>
+						</li>
+					</ul>
+				</section>
+				<section class="sections">
+					<h2 class="main-title">Code example</h2>
+					<div class="code">
+						<pre>
+							<code data-language="javascript">
+	// Function for stopwatch
+	function updateStopwatch() {
+		const hours = Math.floor(timeOver / 3600).toString().padStart(2, '0');
+		const minutes = Math.floor((timeOver % 3600) / 60).toString().padStart(2, '0');
+		const seconds = (timeOver % 60).toString().padStart(2, '0');
+		document.querySelector('.stopwatch').innerHTML = `${hours}:${minutes}:${seconds}`;
+	}
+
+	// Function for button stopwatch
+	function startStopStopwatch() {
+		const button = document.getElementById('stopwatch-button');
+		if (running) {
+			clearInterval(stopwatchInterval);
+			button.innerHTML = 'Сброс';
+			running = false;
+		} else if (button.innerHTML === 'Сброс') {
+			timeOver = 0;
+			updateStopwatch();
+			button.innerHTML = 'Пуск';
+		} else {
+			stopwatchInterval = setInterval(() => {
+				timeOver++;
+				updateStopwatch();
+			}, 1000);
+			button.innerHTML = 'Стоп';
+			running = true;
+		}
+	}
+							</code>
+						</pre>
+					</div>
+				</section>
+				<section class="sections">
+					<h2 class="main-title" id="projects">My projects</h2>
+					<ul class="projects-ul">
+						<li class="projects-li">
+							<a href="https://digrayden.github.io/projects/">
+								<img src="images/time.png" alt="JS Time screenshot" class="projects-img">
+								<h3 class="projects-text">JavaScript Time and stopwatch</h3>
+							</a>
+						</li>
+						<li class="projects-li">
+							<a href="https://digrayden.github.io/photorobot/">
+								<img src="images/photopobot.png" alt="Photorobot screenshot" class="projects-img">
+								<h3 class="projects-text">Photorobot</h3>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<a class="footer-github" href="https://github.com/digrayden">
+				<img src="images/git.svg" alt="RS School" class="footer-img">
+			</a>
+			<p class="footer-year">2024</p>
+			<a class="footer-rsschool" href="https://rs.school/courses/javascript-ru">
+				<img src="images/logo.svg" alt="RS School">
+			</a>
+		</footer>
+	</div>
 </body>
 </html>
